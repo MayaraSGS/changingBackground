@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Changing Background</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Open Sens";
+        }
+
+        .laranja{
+            background: rgb(243, 173, 43);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .vermelho{
+            background: rgb(175, 40, 40);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .purpura{
+            background: rgb(109, 29, 109);
+            transition: all 0.25s ease-in-out;
+        }
+
+        button{
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 10px;
+        }
+
+        div.container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 90vw;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="laranja" id="btn-laranja">Laranja</button>
+        <button class="vermelho" id="btn-vermelho">Vermelho</button>
+        <button class="purpura" id="btn-purpura">Purpura</button>
+    </div>
+
+    <script>
+        document.getElementById("btn-laranja").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","laranja");
+        })
+
+        document.getElementById("btn-vermelho").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","vermelho");
+        })
+
+        document.getElementById("btn-purpura").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class","purpura");
+        })
+    </script>
+    
+</body>
+
+</html>
